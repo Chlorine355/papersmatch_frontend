@@ -1,0 +1,46 @@
+.home-page {
+    width: 1000px;
+    padding-top: 120px;
+    margin: 0 auto;
+}
+
+.welcome {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 50px;
+    overflow-x: visible;
+    display: flex;
+    padding-bottom: 60px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.welcome span {
+    font-size: 37px;
+    text-align: center;
+}
+
+.hints {
+    position: relative;
+    width: 600px;
+    margin: 0 auto 15px auto;
+    font-size: 14px;
+    padding-left: 30px;
+}
+
+.hints > a {
+    color: black;
+    transition: color 0.25s;
+}
+
+.hints > a:hover {
+    color: var(--blue-1)
+}
+
+.subtext {
+    text-align: center;
+}
+
+.subtext a {
+    color: var(--blue-1)!important;
+}

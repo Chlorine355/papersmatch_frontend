@@ -1,0 +1,33 @@
+.header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    z-index: 100;
+    padding: 30px;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    box-shadow: 0 0 5px 0px black;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.hover-name {
+    background-color: var(--blue-1);
+    background-image: linear-gradient(-75deg, transparent 0, transparent 5%, rgba(255, 255, 255, 0.5) 5%, rgba(255, 255, 255, 0.5) 10%, transparent 10%, transparent 100%);
+    background-size: 200% 100%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: background-position 0.6s ease;
+}
+.hover-name:hover {
+    background-position: -120% 0;
+}
+
+.logo {
+    font-size: 30px;
+}
