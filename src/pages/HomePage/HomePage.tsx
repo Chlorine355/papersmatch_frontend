@@ -1,5 +1,6 @@
 import { Link } from "react-router"
 import './HomePage.css'
+import { SearchBar } from "../../widgets/SearchBar/SearchBar"
 
 export const HomePage = () => {
     return <main className="home-page">
@@ -8,7 +9,7 @@ export const HomePage = () => {
                 платформу, которая поможет вам<br />быстро и легко найти релевантные<br />
                 статьи и исследования.</span>
         </div>
-        <div className="searchbar"></div>
+        <SearchBar/>
         <div className="hints">Например: <Link to="/search/Вакцинация в Африке/1">Вакцинация в Африке</Link></div>
         <div className="subtext">Присоединяйтесь к PapersMatch и откройте мир знаний!</div>
         <div className="subtext">Введите <Link to="/search/search engine/1">запрос</Link>, 
