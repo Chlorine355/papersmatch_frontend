@@ -23,17 +23,17 @@
 .hints {
     position: relative;
     width: 600px;
-    margin: 0 auto 15px auto;
+    margin: 5px auto 15px auto;
     font-size: 14px;
     padding-left: 30px;
 }
 
-.hints > a {
+.hints>a {
     color: black;
     transition: color 0.25s;
 }
 
-.hints > a:hover {
+.hints>a:hover {
     color: var(--blue-1)
 }
 
@@ -42,5 +42,31 @@
 }
 
 .subtext a {
-    color: var(--blue-1)!important;
+    color: var(--blue-1) !important;
+}
+
+.plane {
+    position: absolute;
+    bottom: 0;
+    transition: transform 0.3s ease;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    object-position: center;
+    background-size: cover;
+    background-image: url("./../../assets/paper-plane.png");
+}
+
+.plane:hover {
+    transform: translateY(-40px);
+}
+
+.plane.left {
+    left: 0;
+    bottom: 70px;
+}
+
+.plane.right {
+    right: 0;
+    scale: -1 1;
 }

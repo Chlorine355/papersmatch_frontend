@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Myriad";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./../assets/Myriad.ttf");
+}
+
+
 * {
     --blue-1: #000174;
     font-family: "Myriad", 'system-ui';
