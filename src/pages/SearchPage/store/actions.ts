@@ -1,7 +1,12 @@
 import { createEffect } from "effector";
-import type { SearchResultType } from "../types";
+import type { FiltersType, SearchResultType } from "../types";
 
-export const fetchSearchResultsFx = createEffect<{ query: string; page: number }, {data: SearchResultType[], total: number}>(async ({ query, page }) => {
-    const result = (await fetch(`http://localhost:80/search?query=${query}&page=${page}`)).json();
+export const fetchSearchResultsFx = createEffect<{ query: string; page: number, filters: FiltersType | null }, {data: SearchResultType[], total: number}>(async ({ query, page, filters }) => {
+    const params = {
+        query: query,
+        page: String(page),
+        ...filters
+    }
+    const result = (await fetch(`http://localhost:80/search?` + new URLSearchParams(params).toString())).json();
     return result;
 });

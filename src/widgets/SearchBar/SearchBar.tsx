@@ -3,11 +3,12 @@ import './SearchBar.css'
 
 type SearchBarProps = {
     onSearch: (value: string) => void;
+    onChange: (value: string) => void;
     initialValue?: string;
 };
 
 export const SearchBar = (props: SearchBarProps) => {
-    const { initialValue = '', onSearch } = props;
+    const { initialValue = '', onSearch, onChange } = props;
 
     const [value, setValue] = useState<string>(initialValue);
     const enterHandler: KeyboardEventHandler = (event) => { if (event.key === 'Enter') { onSearch(value) } }
@@ -17,7 +18,7 @@ export const SearchBar = (props: SearchBarProps) => {
             <input 
                 value={value}
                 onKeyDown={enterHandler} 
-                onChange={(event) => setValue(event.target?.value)} 
+                onChange={(event) => {setValue(event.target?.value); onChange(event.target.value)}} 
                 type="text" 
                 id="search" 
                 placeholder="Статья, автор, тема..." 

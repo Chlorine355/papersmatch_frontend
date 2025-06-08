@@ -13,3 +13,10 @@ export type SearchResultType = {
     } | null;
     year: number;
 }
+
+export type FiltersType = {
+    yearFrom?: string;
+    yearTo?: string;
+    minCitations?: string;
+    isOpenAccess?: string;
+}
