@@ -15,6 +15,7 @@ export const SearchBar = (props: SearchBarProps) => {
     return (
         <div className="searchbar">
             <input 
+                value={value}
                 onKeyDown={enterHandler} 
                 onChange={(event) => setValue(event.target?.value)} 
                 type="text" 

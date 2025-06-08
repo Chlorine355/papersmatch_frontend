@@ -1,0 +1,89 @@
+.main-content {
+    width: min(90vw, 1000px);
+    padding-top: 50px;
+    margin: 0 auto;
+}
+
+.result-sections {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.result-section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 50%;
+}
+
+.result {
+    padding: 20px;
+    background-color: #E6F6FF;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.result-property {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.result a {
+    color: var(--blue-1);
+}
+
+.result-sections .abstract {
+    -webkit-mask-image: linear-gradient(rgb(0, 0, 0) 50%, transparent);
+    mask-image: linear-gradient(rgb(0, 0, 0) 50%, transparent);
+    max-height: 100px;
+    transition: max-height 0.6s linear;
+    overflow: hidden;
+    will-change: max-height;
+}
+
+.result-sections .abstract:hover {
+    max-height: 500px;
+    text-overflow: ellipsis;
+    -webkit-mask-image: none;
+    mask-image: none;
+}
+
+.result-sections .author:not(:last-child):after, .result-sections .fieldOfStudy:not(:last-child):after {
+    content: ' • ';
+    width: 5px;
+    text-align: center;
+}
+
+.pagination {
+    margin: 30px auto;
+}
+
+.ant-pagination-item {
+    border-radius: 100px!important;
+}
+
+.ant-pagination-item-active {
+    border-color: var(--blue-1);
+}
+
+.ant-pagination-item.ant-pagination-item-active a {
+    color: var(--blue-1);
+}
+
+.result-paragraph svg {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+}
+
+div.title > a:visited {
+    color: darkviolet !important;
+}
